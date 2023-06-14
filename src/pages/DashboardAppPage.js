@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import { Grid, Container, Typography, Box, Tabs, Tab } from '@mui/material';
 // components
+// eslint-disable-next-line import/no-unresolved
+import Iconify from 'src/components/iconify/Iconify';
 import Pendientes from '../components/PendientesTab';
+import Chart from '../components/chart/index';
 // sections
 import {
   AppTasks,
@@ -19,6 +22,7 @@ import {
   AppCurrentSubject,
   AppConversionRates,
 } from '../sections/@dashboard/app';
+
 
 // ----------------------------------------------------------------------
 function TabPanel(props) {
@@ -83,12 +87,12 @@ export default function DashboardAppPage() {
           <Pendientes/>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+        <Pendientes/>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
-        </TabPanel>
-        {/* <Grid container spacing={3}>
+          {/* <Chart/> */}
+        
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
           </Grid>
@@ -266,7 +270,9 @@ export default function DashboardAppPage() {
               ]}
             />
           </Grid>
-        </Grid> */}
+        </Grid>
+
+</TabPanel>
       </Container>
     </>
   );
